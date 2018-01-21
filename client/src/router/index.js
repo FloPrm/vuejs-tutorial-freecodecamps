@@ -5,7 +5,8 @@ import Register from '@/components/Register'
 import Login from '@/components/Login'
 import Movies from '@/components/Movies'
 import CreateMovie from '@/components/CreateMovie'
-import ViewMovie from '@/components/ViewMovie'
+import ViewMovie from '@/components/ViewMovie/Index'
+import EditMovie from '@/components/EditMovie'
 
 Vue.use(Router)
 
@@ -40,6 +41,11 @@ export default new Router({
       path: '/movies/:movieId',
       name: 'movie',
       component: ViewMovie
+    },
+    {
+      path: '/movies/:movieId/edit',
+      name: 'movie-edit',
+      component: EditMovie
     }
   ]
 })

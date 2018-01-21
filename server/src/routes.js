@@ -11,6 +11,10 @@ module.exports = (app) => {
 
   app.get('/movies',
     MoviesController.index)
+  app.get('/movies/:movieId',
+    MoviesController.show)
   app.post('/movies',
     MoviesController.post)
+  app.put('/movies/:movieId',
+    MoviesController.put)
 }
